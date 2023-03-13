@@ -15,9 +15,18 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  // Sets the text of the scheduler from past defined local storage
+  $('#hour-9 .notification').text(localStorage.getItem('hour-9'));
+  $('#hour-10 .notification').text(localStorage.getItem('hour-10'));
+  $('#hour-11 .notification').text(localStorage.getItem('hour-11'));
+  $('#hour-12 .notification').text(localStorage.getItem('hour-12'));
+  $('#hour-13 .notification').text(localStorage.getItem('hour-13'));
+  $('#hour-14 .notification').text(localStorage.getItem('hour-14'));
+  $('#hour-15 .notification').text(localStorage.getItem('hour-15'));
+  $('#hour-16 .notification').text(localStorage.getItem('hour-16'));
+  $('#hour-17 .notification').text(localStorage.getItem('hour-17'));
+
   //
   // TODO: Add code to display the current date in the header of the page.
+  $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
 });
