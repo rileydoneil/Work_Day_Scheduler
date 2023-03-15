@@ -10,12 +10,17 @@ $(document).ready(function () {
   $('.saveBtn').on('click', function() {
     var desc = $(this).siblings('.description').val();
     var blockTime = $(this).parent().attr('id');
+
+    //savess data
     localStorage.setItem(blockTime, desc);
+
+    $('.notification').addClass('show');
   })
 
   //compares the current hour with the id field to determine past,present,future
   function updateHour() {
     let currentHour = dayjs().hour();
+    //https://api.jquery.com/each/
     $('.time-block').each( function() {
       let blockHour = parseInt($(this).attr('id').split('-')[1]);
       console.log(currentHour);
