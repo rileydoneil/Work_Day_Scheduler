@@ -46,6 +46,7 @@ $(document).ready(function () {
   $('#hour-17 .notification').text(localStorage.getItem('hour-17'));
 
   updateHour();
+  setInterval(updateHour, 60000);
   // Add code to display the current date in the header of the page.
   $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
 });
